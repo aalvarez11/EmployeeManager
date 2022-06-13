@@ -18,8 +18,18 @@ public class Employee {
     Long id;
     @Column(name = "first_name")
     String firstName;
-    @Column(name = "last name")
+    @Column(name = "last_name")
     String lastName;
     @Column(name = "email")
     String email;
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }
