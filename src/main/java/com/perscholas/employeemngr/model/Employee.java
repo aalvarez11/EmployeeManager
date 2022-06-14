@@ -9,6 +9,7 @@ import javax.persistence.*;
 @Setter
 @Getter
 @RequiredArgsConstructor
+@NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Table(name = "employees")
@@ -17,10 +18,13 @@ public class Employee {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     @Column(name = "first_name")
+    @NonNull
     String firstName;
     @Column(name = "last_name")
+    @NonNull
     String lastName;
     @Column(name = "email")
+    @NonNull
     String email;
 
     @Override
